@@ -300,12 +300,14 @@ function checkAnswer(user){
             document.getElementById("b").style.display="none";
             document.getElementById("c").style.display="none";
             document.getElementById("d").style.display="none";
+            i = 0 ;
 
 
         }
         else{
             document.getElementById('question').innerHTML = score + "/5";
             document.getElementById("question").style.color="red";
+            i = 0 ;
         }
     }
     else{
