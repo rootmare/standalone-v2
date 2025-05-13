@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
+    
+</head>
+<body>
+
+    <!-- login page -->
+    <div id="index" data-role="page" data-title="login" data-theme="a" >
+        
+        <!-- ---------------------------------------------------------------------- -->
+        <!-- for dev and testing -->
+        <div data-role="header" data-position="fixed" style="text-align: right; width: 100%;">
+            
+
+            <div id="date"></div>
+            <div id="time"></div>
+            
+            
+        </div>
+        <br>
+        <!-- ---------------------------------------------------------------------- -->
+        
+        <div data-role="content"onload="time()">
+            
+            <!-- content -->
+            <div>
+                <h3>Login</h3>
+                <form action="" id="signupform">
+                    <h4>Name:</h4>
+                    <input type="text" placeholder="Please enter your name" id="name" required>
+                    <h4>E-mail:</h4>
+                    <input type="email" placeholder="example@email.com" id="Email" required>
+                    <button>Enter</button>
+                </form>
+            </div>
+        </div>
+
+
+        
+    </div>
+
+    
+    <!-- quiz choice page -->
+    <div id="page2" data-role="page" data-title="Quiz choice" data-theme="a" >
+
+        <!-- ---------------------------------------------------------------------- -->
+        <!-- for dev and testing -->
+        <div data-role="header" data-position="fixed" style="text-align: right; width: 100%;">
+            
+            <div id="date2"></div>
+            <div id="time2"></div>
+            <div class="name"></div>
+            
+        </div>
+        <br>
+        <!-- ---------------------------------------------------------------------- -->
+        
+
+        <div data-role="content" onload="time()">
+            <button class="btns" onclick="topic('Mathematics')">
+                <div class="cloud_flex">
+                    <h3 class="quiz_name">Mathematics</h3>
+                    <div class="animation"></div>
+                </div>
+            </button>
+
+            <button class="btns" onclick="topic('English')">
+                <div class="cloud_flex">
+                    <h3 class="quiz_name">English</h3>
+                    <div class="animation"></div>
+                </div>
+            </button>
+            
+            <button class="btns" onclick="topic('Health')">
+                <div class="cloud_flex">
+                    <h3 class="quiz_name">Health</h3>
+                    <div class="animation"></div>
+                </div>
+            </button>
+            
+            <button class="btns" onclick="topic('Scots History')">
+                <div class="cloud_flex">
+                    <h3 class="quiz_name">Scots History</h3>
+                    <div class="animation"></div>
+                </div>
+            </button>
+
+            <button class="btns" onclick="topic('Social Awareness')">
+                <div class="cloud_flex">
+                    <h3 class="quiz_name">Social Awareness</h3>
+                    <div class="animation"></div>
+                </div>
+            </button>
+
+
+            <button onclick ='document.location.href = "index.html#index"'>
+                <div class="cloud_flex">
+                    <h3 class="quiz_name">Log Out</h3>
+                    <div class="animation"></div>
+                </div>
+            </button>
+
+        </div>
+
+        
+    </div>
+
+    <div id="page3" data-role="page" data-title="primaryQuiz" data-theme="a" >
+
+        <!-- ---------------------------------------------------------------------- -->
+        <!-- for dev and testing -->
+        <div data-role="header" data-position="fixed" style="text-align: right; width: 100%;">
+            
+            
+
+            <div id="date3"></div>
+            <div id="time3"></div>
+            <div id="name3"></div>
+            <div id="score">0/5</div>
+            
+        </div>
+        <br>
+        <br>
+        <br>
+        <!-- ---------------------------------------------------------------------- -->
+        
+
+        <div data-role="content"  id="content" onload="time()">
+            <!-- fuck you and your little class ass -->
+            <div id="question" style="text-align: center; width: 100%; font-size: xx-large;"></div>
+            <div class="answer"  style="align-items: center; width: 100%; display: flex; flex-direction: row;" >
+                <button id="a" onclick="checkAnswer('a')" style="text-align: center; width: 40%;"></button>
+                <button id="b" onclick="checkAnswer('b')" style="text-align: center; width: 40%;"></button>
+                <button id="c" onclick="checkAnswer('c')" style="text-align: center; width: 40%;"></button>
+                <button id="d" onclick="checkAnswer('d')" style="text-align: center; width: 40%;"></button>
+            </div>
+            <button id="back" onclick="back()">Next Quiz</button>
+        </div>
+
+       
+    </div>
+    
+    <script src="/js/mathquiz.js"></script>
+    <script src="/js/cookie.js"></script>
+</body>
+</html>
