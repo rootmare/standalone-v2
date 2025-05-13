@@ -70,7 +70,7 @@ englishAnswers = [
     // question 2 
     "b", 
     // question 3 
-    "c", 
+    "b", 
     // question 4 
     "c", 
     // question 5 
