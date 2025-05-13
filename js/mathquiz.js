@@ -208,12 +208,19 @@ function topic(choice){
 
 
 function quiz(choice){
+    document.getElementById("a").style.display="block";
+    document.getElementById("b").style.display="block";
+    document.getElementById("c").style.display="block";
+    document.getElementById("d").style.display="block";
     switch (choice) {
         case 'Mathematics':
             questions = mathQuestions;
             responsives = mathResponsives;
             answers = mathAnswers;
-            
+            i = 0 ;
+            k = 0;
+            score = 0;
+            document.getElementById("question").style.color="black";
 
             setQuestion()
 
@@ -222,7 +229,10 @@ function quiz(choice){
             questions = englishQuestions;
             responsives = englishResponsives;
             answers = englishAnswers;
-            
+            i = 0 ;
+            k = 0;
+            score = 0;
+            document.getElementById("question").style.color="black";
 
             setQuestion()
 
@@ -231,7 +241,10 @@ function quiz(choice){
             questions = healthQuestions;
             responsives = healthResponsives;
             answers = healthAnswers;
-            
+            i = 0 ;
+            k = 0;
+            score = 0;
+            document.getElementById("question").style.color="black";
 
             setQuestion()
 
@@ -240,7 +253,10 @@ function quiz(choice){
             questions = historyQuestions;
             responsives = historyResponsives;
             answers = historyAnswers;
-            
+            i = 0 ;
+            k = 0;
+            score = 0;
+            document.getElementById("question").style.color="black";
 
             setQuestion()
 
@@ -249,7 +265,10 @@ function quiz(choice){
             questions = socialQuestions;
             responsives = socialResponsives;
             answers = socialAnswers;
-            
+            i = 0 ;
+            k = 0;
+            score = 0;
+            document.getElementById("question").style.color="black";
 
             setQuestion()
 
